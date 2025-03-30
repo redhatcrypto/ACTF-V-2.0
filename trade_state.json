@@ -8,15 +8,15 @@
     "side": null,
     "cumulative_fees": 0.0,
     "current_leverage": 10,
-    "last_price": 1819.46,
+    "last_price": 1837.71,
     "positions": {},
-    "skipped_trades": 9,
+    "skipped_trades": 38,
     "last_price_history": [
-        1827.82,
-        1827.96,
-        1822.99,
-        1822.13,
-        1819.46
+        1838.39,
+        1837.99,
+        1837.89,
+        1837.86,
+        1837.71
     ],
     "dynamic_volume_ratio": 0.2,
     "dynamic_rsi_buy": 30,

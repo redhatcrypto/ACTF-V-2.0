@@ -122,3 +122,341 @@
 2025-03-30 00:29:47,940 - INFO - Saved state to trade_state.json
 2025-03-30 00:29:47,942 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
 2025-03-30 00:29:47,945 - INFO - Saved state to trade_state.json
+2025-03-30 07:14:59,271 - INFO - Starting backtest with initial balance: 20 USDT
+2025-03-30 07:15:02,245 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:15:03,125 - INFO - Positions fetched: {}
+2025-03-30 07:15:04,006 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0075
+2025-03-30 07:15:04,006 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:15:04,007 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:15:04,007 - INFO - Current indicators: RSI=69.66522899979451, Stoch RSI=100.0, MACD=1.7410467454014906, MACD Signal=-0.8761087927521709, Close=1837.46, BB Lower=1809.8396085922598, BB Upper=1837.9323914077402, Volume=1426124.592, Avg Volume=1317630.7552999998
+2025-03-30 07:15:04,175 - INFO - Adjusted leverage to 10 based on volatility 0.0076
+2025-03-30 07:15:04,175 - INFO - Saved state to trade_state.json
+2025-03-30 07:15:04,176 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:15:04,177 - INFO - Saved state to trade_state.json
+2025-03-30 07:15:04,177 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:15:04,178 - INFO - Saved state to trade_state.json
+2025-03-30 07:16:04,581 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:16:05,072 - INFO - Positions fetched: {}
+2025-03-30 07:16:05,777 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0075
+2025-03-30 07:16:05,779 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:16:05,781 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:16:05,782 - INFO - Current indicators: RSI=69.66522899979451, Stoch RSI=100.0, MACD=1.7410467454014906, MACD Signal=-0.8761087927521709, Close=1837.46, BB Lower=1809.8396085922598, BB Upper=1837.9323914077402, Volume=1426124.592, Avg Volume=1317630.7552999998
+2025-03-30 07:16:06,148 - INFO - Adjusted leverage to 10 based on volatility 0.0076
+2025-03-30 07:16:06,150 - INFO - Saved state to trade_state.json
+2025-03-30 07:16:06,150 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:16:06,152 - INFO - Saved state to trade_state.json
+2025-03-30 07:16:06,152 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:16:06,154 - INFO - Saved state to trade_state.json
+2025-03-30 07:17:06,540 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:17:06,897 - INFO - Positions fetched: {}
+2025-03-30 07:17:07,817 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0076
+2025-03-30 07:17:07,819 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:17:07,820 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:17:07,821 - INFO - Current indicators: RSI=67.80696395846047, Stoch RSI=94.19420895826595, MACD=2.211018609579469, MACD Signal=-0.26324144847144865, Close=1836.42, BB Lower=1810.175369264725, BB Upper=1839.5156307352752, Volume=142761.626, Avg Volume=1248575.1614
+2025-03-30 07:17:08,195 - INFO - Adjusted leverage to 10 based on volatility 0.0077
+2025-03-30 07:17:08,198 - INFO - Saved state to trade_state.json
+2025-03-30 07:17:08,199 - INFO - Trade skipped: Volume (142761.626) below threshold (249715.03228000004)
+2025-03-30 07:17:08,201 - INFO - Saved state to trade_state.json
+2025-03-30 07:18:08,622 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:18:08,993 - INFO - Positions fetched: {}
+2025-03-30 07:18:09,916 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0076
+2025-03-30 07:18:09,917 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:18:09,919 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:18:09,920 - INFO - Current indicators: RSI=67.97305572565803, Stoch RSI=94.82416587120392, MACD=2.2205912591521155, MACD Signal=-0.2613269185569193, Close=1836.54, BB Lower=1810.1613525319804, BB Upper=1839.54164746802, Volume=241194.41, Avg Volume=1253496.8006
+2025-03-30 07:18:10,295 - INFO - Adjusted leverage to 10 based on volatility 0.0077
+2025-03-30 07:18:10,298 - INFO - Saved state to trade_state.json
+2025-03-30 07:18:10,298 - INFO - Trade skipped: Volume (241194.41) below threshold (250699.36012)
+2025-03-30 07:18:10,301 - INFO - Saved state to trade_state.json
+2025-03-30 07:19:10,756 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:19:11,100 - INFO - Positions fetched: {}
+2025-03-30 07:19:12,016 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:19:12,018 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:19:12,021 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:19:12,022 - INFO - Current indicators: RSI=66.2291169451072, Stoch RSI=88.20971225266972, MACD=2.1176852762462204, MACD Signal=-0.2819081151380983, Close=1835.25, BB Lower=1810.303058838164, BB Upper=1839.2709411618366, Volume=372159.441, Avg Volume=1260045.0521500001
+2025-03-30 07:19:12,200 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:19:12,202 - INFO - Saved state to trade_state.json
+2025-03-30 07:19:12,203 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:19:12,205 - INFO - Saved state to trade_state.json
+2025-03-30 07:19:12,206 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:19:12,209 - INFO - Saved state to trade_state.json
+2025-03-30 07:20:12,584 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:20:12,930 - INFO - Positions fetched: {}
+2025-03-30 07:20:14,033 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:20:14,035 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:20:14,037 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:20:14,038 - INFO - Current indicators: RSI=68.32170701682368, Stoch RSI=96.1465390073348, MACD=2.2405342790953, MACD Signal=-0.25733831456828243, Close=1836.79, BB Lower=1810.131610477142, BB Upper=1839.5963895228585, Volume=492220.985, Avg Volume=1266048.12935
+2025-03-30 07:20:14,215 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:20:14,217 - INFO - Saved state to trade_state.json
+2025-03-30 07:20:14,218 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:20:14,221 - INFO - Saved state to trade_state.json
+2025-03-30 07:20:14,222 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:20:14,224 - INFO - Saved state to trade_state.json
+2025-03-30 07:21:14,580 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:21:14,930 - INFO - Positions fetched: {}
+2025-03-30 07:21:15,840 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:21:15,842 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:21:15,843 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:21:15,845 - INFO - Current indicators: RSI=65.97978997424184, Stoch RSI=87.26405882547911, MACD=2.102528581089473, MACD Signal=-0.2849394541694478, Close=1835.06, BB Lower=1810.3222334310456, BB Upper=1839.2327665689547, Volume=587628.935, Avg Volume=1270818.52685
+2025-03-30 07:21:16,219 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:21:16,222 - INFO - Saved state to trade_state.json
+2025-03-30 07:21:16,223 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:21:16,225 - INFO - Saved state to trade_state.json
+2025-03-30 07:21:16,226 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:21:16,229 - INFO - Saved state to trade_state.json
+2025-03-30 07:22:16,635 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:22:16,991 - INFO - Positions fetched: {}
+2025-03-30 07:22:17,713 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:22:17,715 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:22:17,716 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:22:17,718 - INFO - Current indicators: RSI=65.97978997424184, Stoch RSI=87.26405882547911, MACD=2.102528581089473, MACD Signal=-0.2849394541694478, Close=1835.06, BB Lower=1810.3222334310456, BB Upper=1839.2327665689547, Volume=587628.935, Avg Volume=1270818.52685
+2025-03-30 07:22:18,092 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:22:18,095 - INFO - Saved state to trade_state.json
+2025-03-30 07:22:18,096 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:22:18,098 - INFO - Saved state to trade_state.json
+2025-03-30 07:22:18,099 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:22:18,102 - INFO - Saved state to trade_state.json
+2025-03-30 07:23:18,471 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:23:18,822 - INFO - Positions fetched: {}
+2025-03-30 07:23:19,749 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:23:19,751 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:23:19,752 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:23:19,754 - INFO - Current indicators: RSI=67.2455573505652, Stoch RSI=92.06489225834777, MACD=2.178312056872983, MACD Signal=-0.26978275901274584, Close=1836.01, BB Lower=1810.2219786831788, BB Upper=1839.4280213168213, Volume=670324.149, Avg Volume=1274953.28755
+2025-03-30 07:23:20,140 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:23:20,143 - INFO - Saved state to trade_state.json
+2025-03-30 07:23:20,144 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:23:20,146 - INFO - Saved state to trade_state.json
+2025-03-30 07:23:20,147 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:23:20,150 - INFO - Saved state to trade_state.json
+2025-03-30 07:24:20,509 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:24:20,874 - INFO - Positions fetched: {}
+2025-03-30 07:24:21,988 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:24:21,990 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:24:21,992 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:24:21,993 - INFO - Current indicators: RSI=67.57305194805173, Stoch RSI=93.30702176974661, MACD=2.197457356018276, MACD Signal=-0.26595369918368716, Close=1836.25, BB Lower=1810.19493644107, BB Upper=1839.4790635589304, Volume=757227.354, Avg Volume=1279298.4478
+2025-03-30 07:24:22,225 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:24:22,228 - INFO - Saved state to trade_state.json
+2025-03-30 07:24:22,229 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:24:22,232 - INFO - Saved state to trade_state.json
+2025-03-30 07:24:22,232 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:24:22,235 - INFO - Saved state to trade_state.json
+2025-03-30 07:25:22,628 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:25:22,978 - INFO - Positions fetched: {}
+2025-03-30 07:25:23,847 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:25:23,847 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:25:23,848 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:25:23,848 - INFO - Current indicators: RSI=68.32170701682368, Stoch RSI=96.1465390073348, MACD=2.2405342790953, MACD Signal=-0.25733831456828243, Close=1836.79, BB Lower=1810.131610477142, BB Upper=1839.5963895228585, Volume=819097.859, Avg Volume=1282391.97305
+2025-03-30 07:25:24,202 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:25:24,203 - INFO - Saved state to trade_state.json
+2025-03-30 07:25:24,203 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:25:24,204 - INFO - Saved state to trade_state.json
+2025-03-30 07:25:24,204 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:25:24,205 - INFO - Saved state to trade_state.json
+2025-03-30 07:26:24,609 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:26:24,960 - INFO - Positions fetched: {}
+2025-03-30 07:26:25,860 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:26:25,862 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:26:25,864 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:26:25,865 - INFO - Current indicators: RSI=64.9629340616463, Stoch RSI=83.40730287417726, MACD=2.0395086380697194, MACD Signal=-0.29754344277339856, Close=1834.27, BB Lower=1810.3971748016716, BB Upper=1839.0788251983286, Volume=921591.889, Avg Volume=1287516.67455
+2025-03-30 07:26:26,042 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:26:26,044 - INFO - Saved state to trade_state.json
+2025-03-30 07:26:26,045 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:26:26,047 - INFO - Saved state to trade_state.json
+2025-03-30 07:26:26,048 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:26:26,051 - INFO - Saved state to trade_state.json
+2025-03-30 07:27:26,521 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:27:26,883 - INFO - Positions fetched: {}
+2025-03-30 07:27:27,770 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:27:27,772 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:27:27,774 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:27:27,775 - INFO - Current indicators: RSI=66.57337065173908, Stoch RSI=89.5154061227297, MACD=2.1384260169870686, MACD Signal=-0.2777599669899287, Close=1835.51, BB Lower=1810.2761060752484, BB Upper=1839.3238939247515, Volume=1015108.009, Avg Volume=1292192.48055
+2025-03-30 07:27:28,153 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:27:28,156 - INFO - Saved state to trade_state.json
+2025-03-30 07:27:28,157 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:27:28,159 - INFO - Saved state to trade_state.json
+2025-03-30 07:27:28,160 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:27:28,162 - INFO - Saved state to trade_state.json
+2025-03-30 07:28:28,521 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:28:28,875 - INFO - Positions fetched: {}
+2025-03-30 07:28:30,015 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:28:30,017 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:28:30,019 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:28:30,021 - INFO - Current indicators: RSI=66.57337065173908, Stoch RSI=89.5154061227297, MACD=2.1384260169870686, MACD Signal=-0.2777599669899287, Close=1835.51, BB Lower=1810.2761060752484, BB Upper=1839.3238939247515, Volume=1015108.009, Avg Volume=1292192.48055
+2025-03-30 07:28:30,403 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:28:30,406 - INFO - Saved state to trade_state.json
+2025-03-30 07:28:30,406 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:28:30,408 - INFO - Saved state to trade_state.json
+2025-03-30 07:28:30,408 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:28:30,412 - INFO - Saved state to trade_state.json
+2025-03-30 07:29:30,833 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:29:31,198 - INFO - Positions fetched: {}
+2025-03-30 07:29:32,371 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:29:32,373 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:29:32,375 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:29:32,376 - INFO - Current indicators: RSI=66.98853349426645, Stoch RSI=91.09004589601848, MACD=2.1631553617162353, MACD Signal=-0.27281409804409534, Close=1835.82, BB Lower=1810.2429006581003, BB Upper=1839.3880993419, Volume=1113127.366, Avg Volume=1297093.4483999999
+2025-03-30 07:29:32,759 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:29:32,762 - INFO - Saved state to trade_state.json
+2025-03-30 07:29:32,764 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:29:32,766 - INFO - Saved state to trade_state.json
+2025-03-30 07:29:32,767 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:29:32,770 - INFO - Saved state to trade_state.json
+2025-03-30 07:30:33,152 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:30:33,517 - INFO - Positions fetched: {}
+2025-03-30 07:30:34,634 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:30:34,636 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:30:34,638 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:30:34,639 - INFO - Current indicators: RSI=67.84841075794606, Stoch RSI=94.35140939207217, MACD=2.2134117719726873, MACD Signal=-0.26276281599280493, Close=1836.45, BB Lower=1810.171880920395, BB Upper=1839.5221190796053, Volume=1167819.435, Avg Volume=1299828.05185
+2025-03-30 07:30:35,014 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:30:35,017 - INFO - Saved state to trade_state.json
+2025-03-30 07:30:35,019 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:30:35,021 - INFO - Saved state to trade_state.json
+2025-03-30 07:30:35,022 - INFO - Sell conditions not met: {'rsi': np.False_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:30:35,026 - INFO - Saved state to trade_state.json
+2025-03-30 07:31:35,380 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:31:35,728 - INFO - Positions fetched: {}
+2025-03-30 07:31:36,633 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0076
+2025-03-30 07:31:36,635 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:31:36,637 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:31:36,638 - INFO - Current indicators: RSI=70.89249492900605, Stoch RSI=100.0, MACD=2.4732420556308625, MACD Signal=0.2664899671399634, Close=1836.44, BB Lower=1810.1620859769273, BB Upper=1840.7349140230726, Volume=68552.465, Avg Volume=1230446.9925
+2025-03-30 07:31:36,819 - INFO - Adjusted leverage to 10 based on volatility 0.0077
+2025-03-30 07:31:36,821 - INFO - Saved state to trade_state.json
+2025-03-30 07:31:36,821 - INFO - Trade skipped: Volume (68552.465) below threshold (246089.3985)
+2025-03-30 07:31:36,823 - INFO - Saved state to trade_state.json
+2025-03-30 07:32:37,194 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:32:37,547 - INFO - Positions fetched: {}
+2025-03-30 07:32:38,493 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0076
+2025-03-30 07:32:38,495 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:32:38,497 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:32:38,498 - INFO - Current indicators: RSI=70.89249492900605, Stoch RSI=100.0, MACD=2.4732420556308625, MACD Signal=0.2664899671399634, Close=1836.44, BB Lower=1810.1620859769273, BB Upper=1840.7349140230726, Volume=68552.465, Avg Volume=1230446.9925
+2025-03-30 07:32:38,959 - INFO - Adjusted leverage to 10 based on volatility 0.0077
+2025-03-30 07:32:38,962 - INFO - Saved state to trade_state.json
+2025-03-30 07:32:38,963 - INFO - Trade skipped: Volume (68552.465) below threshold (246089.3985)
+2025-03-30 07:32:38,966 - INFO - Saved state to trade_state.json
+2025-03-30 07:33:39,128 - ERROR - Bot error: binance {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}, Traceback: binance {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2025-03-30 07:33:49,498 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:33:49,843 - INFO - Positions fetched: {}
+2025-03-30 07:33:50,708 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0076
+2025-03-30 07:33:50,709 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:33:50,709 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:33:50,710 - INFO - Current indicators: RSI=71.010101010101, Stoch RSI=100.0, MACD=2.4891964715852737, MACD Signal=0.26968085033084566, Close=1836.64, BB Lower=1810.1415794973402, BB Upper=1840.7754205026597, Volume=145156.155, Avg Volume=1234277.177
+2025-03-30 07:33:50,859 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:33:50,860 - INFO - Saved state to trade_state.json
+2025-03-30 07:33:50,860 - INFO - Trade skipped: Volume (145156.155) below threshold (246855.4354)
+2025-03-30 07:33:50,861 - INFO - Saved state to trade_state.json
+2025-03-30 07:34:51,209 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:34:51,550 - INFO - Positions fetched: {}
+2025-03-30 07:34:52,647 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:34:52,649 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:34:52,651 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:34:52,652 - INFO - Current indicators: RSI=71.1093215220454, Stoch RSI=100.0, MACD=2.5027577251466937, MACD Signal=0.27239310104312964, Close=1836.81, BB Lower=1810.1237867223062, BB Upper=1840.8102132776935, Volume=247216.857, Avg Volume=1239380.2121
+2025-03-30 07:34:52,822 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:34:52,826 - INFO - Saved state to trade_state.json
+2025-03-30 07:34:52,827 - INFO - Trade skipped: Volume (247216.857) below threshold (247876.04241999998)
+2025-03-30 07:34:52,829 - INFO - Saved state to trade_state.json
+2025-03-30 07:35:53,196 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:35:53,542 - INFO - Positions fetched: {}
+2025-03-30 07:35:54,762 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:35:54,764 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:35:54,766 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:35:54,766 - INFO - Current indicators: RSI=70.49753289473676, Stoch RSI=100.0, MACD=2.4205924829814194, MACD Signal=0.2559600526100748, Close=1835.78, BB Lower=1810.226454813261, BB Upper=1840.6045451867387, Volume=338591.565, Avg Volume=1243948.9475
+2025-03-30 07:35:54,948 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:35:54,951 - INFO - Saved state to trade_state.json
+2025-03-30 07:35:54,952 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:35:54,954 - INFO - Saved state to trade_state.json
+2025-03-30 07:35:54,955 - INFO - Sell conditions not met: {'rsi': np.True_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:35:54,958 - INFO - Saved state to trade_state.json
+2025-03-30 07:36:55,383 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:36:55,728 - INFO - Positions fetched: {}
+2025-03-30 07:36:56,641 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:36:56,643 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:36:56,645 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:36:56,647 - INFO - Current indicators: RSI=71.4484679665738, Stoch RSI=100.0, MACD=2.5498232522122635, MACD Signal=0.28180620645624366, Close=1837.4, BB Lower=1810.059477823272, BB Upper=1840.933522176728, Volume=465715.973, Avg Volume=1250305.1679
+2025-03-30 07:36:57,015 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:36:57,018 - INFO - Saved state to trade_state.json
+2025-03-30 07:36:57,019 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:36:57,021 - INFO - Saved state to trade_state.json
+2025-03-30 07:36:57,022 - INFO - Sell conditions not met: {'rsi': np.True_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:36:57,025 - INFO - Saved state to trade_state.json
+2025-03-30 07:37:57,430 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:37:57,772 - INFO - Positions fetched: {}
+2025-03-30 07:37:58,757 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:37:58,758 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:37:58,759 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:37:58,759 - INFO - Current indicators: RSI=71.4484679665738, Stoch RSI=100.0, MACD=2.5498232522122635, MACD Signal=0.28180620645624366, Close=1837.4, BB Lower=1810.059477823272, BB Upper=1840.933522176728, Volume=465715.973, Avg Volume=1250305.1679
+2025-03-30 07:37:58,983 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:37:58,985 - INFO - Saved state to trade_state.json
+2025-03-30 07:37:58,985 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:37:58,987 - INFO - Saved state to trade_state.json
+2025-03-30 07:37:58,987 - INFO - Sell conditions not met: {'rsi': np.True_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:37:58,988 - INFO - Saved state to trade_state.json
+2025-03-30 07:38:59,360 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:38:59,504 - ERROR - check_positions error: binance {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2025-03-30 07:39:00,122 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:39:00,123 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:39:00,125 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:39:00,126 - INFO - Current indicators: RSI=71.6291024120205, Stoch RSI=100.0, MACD=2.5753503177393213, MACD Signal=0.28691161956165523, Close=1837.72, BB Lower=1810.0229559884806, BB Upper=1841.0020440115195, Volume=618408.154, Avg Volume=1257939.77695
+2025-03-30 07:39:00,583 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:39:00,586 - INFO - Saved state to trade_state.json
+2025-03-30 07:39:00,587 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:39:00,589 - INFO - Saved state to trade_state.json
+2025-03-30 07:39:00,590 - INFO - Sell conditions not met: {'rsi': np.True_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:39:00,593 - INFO - Saved state to trade_state.json
+2025-03-30 07:40:00,942 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:40:01,289 - INFO - Positions fetched: {}
+2025-03-30 07:40:02,172 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:40:02,174 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:40:02,175 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:40:02,177 - INFO - Current indicators: RSI=71.93977317168549, Stoch RSI=100.0, MACD=2.6200226824116726, MACD Signal=0.2958460924961255, Close=1838.28, BB Lower=1809.9563062869843, BB Upper=1841.1246937130154, Volume=763016.206, Avg Volume=1265170.17955
+2025-03-30 07:40:02,554 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:40:02,557 - INFO - Saved state to trade_state.json
+2025-03-30 07:40:02,558 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:40:02,559 - INFO - Saved state to trade_state.json
+2025-03-30 07:40:02,560 - INFO - Sell conditions not met: {'rsi': np.True_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:40:02,563 - INFO - Saved state to trade_state.json
+2025-03-30 07:41:02,913 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:41:03,261 - INFO - Positions fetched: {}
+2025-03-30 07:41:04,355 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:41:04,357 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:41:04,359 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:41:04,360 - INFO - Current indicators: RSI=71.93977317168549, Stoch RSI=100.0, MACD=2.6200226824116726, MACD Signal=0.2958460924961255, Close=1838.28, BB Lower=1809.9563062869843, BB Upper=1841.1246937130154, Volume=763016.206, Avg Volume=1265170.17955
+2025-03-30 07:41:04,529 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:41:04,532 - INFO - Saved state to trade_state.json
+2025-03-30 07:41:04,533 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:41:04,535 - INFO - Saved state to trade_state.json
+2025-03-30 07:41:04,536 - INFO - Sell conditions not met: {'rsi': np.True_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:41:04,539 - INFO - Saved state to trade_state.json
+2025-03-30 07:42:04,874 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:42:05,215 - INFO - Positions fetched: {}
+2025-03-30 07:42:06,261 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:42:06,261 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:42:06,262 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:42:06,262 - INFO - Current indicators: RSI=72.21684414327194, Stoch RSI=100.0, MACD=2.660706443095478, MACD Signal=0.3039828446328865, Close=1838.79, BB Lower=1809.89262277348, BB Upper=1841.23937722652, Volume=899508.633, Avg Volume=1271994.8009
+2025-03-30 07:42:06,612 - INFO - Adjusted leverage to 10 based on volatility 0.0078
+2025-03-30 07:42:06,613 - INFO - Saved state to trade_state.json
+2025-03-30 07:42:06,613 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:42:06,614 - INFO - Saved state to trade_state.json
+2025-03-30 07:42:06,614 - INFO - Sell conditions not met: {'rsi': np.True_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:42:06,615 - INFO - Saved state to trade_state.json
+2025-03-30 07:43:06,975 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:43:07,375 - INFO - Positions fetched: {}
+2025-03-30 07:43:08,546 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:43:08,548 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:43:08,550 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:43:08,551 - INFO - Current indicators: RSI=71.70741324921123, Stoch RSI=100.0, MACD=2.586518408907523, MACD Signal=0.28914523779529544, Close=1837.86, BB Lower=1810.0066184596544, BB Upper=1841.0323815403453, Volume=992537.496, Avg Volume=1276646.2440499999
+2025-03-30 07:43:08,720 - INFO - Adjusted leverage to 10 based on volatility 0.0079
+2025-03-30 07:43:08,723 - INFO - Saved state to trade_state.json
+2025-03-30 07:43:08,724 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:43:08,727 - INFO - Saved state to trade_state.json
+2025-03-30 07:43:08,728 - INFO - Sell conditions not met: {'rsi': np.True_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:43:08,731 - INFO - Saved state to trade_state.json
+2025-03-30 07:44:09,097 - INFO - Current balance: 13912.93491127 USDT
+2025-03-30 07:44:09,444 - INFO - Positions fetched: {}
+2025-03-30 07:44:10,564 - INFO - Adjusted volume ratio to 0.2 based on volatility 0.0077
+2025-03-30 07:44:10,575 - INFO - Adjusted RSI: Buy=30, Sell=70; Stoch RSI: Buy=20, Sell=80
+2025-03-30 07:44:10,576 - INFO - Risk adjusted: Position size=0.75, SL=0.0225, TP=0.01125
+2025-03-30 07:44:10,577 - INFO - Current indicators: RSI=72.125097125097, Stoch RSI=100.0, MACD=2.647145189534058, MACD Signal=0.3012705939206025, Close=1838.62, BB Lower=1809.9141636012394, BB Upper=1841.2008363987609, Volume=1061646.653, Avg Volume=1280101.7019
+2025-03-30 07:44:10,946 - INFO - Adjusted leverage to 10 based on volatility 0.0079
+2025-03-30 07:44:10,949 - INFO - Saved state to trade_state.json
+2025-03-30 07:44:10,951 - INFO - Buy conditions not met: {'rsi': np.False_, 'stoch_rsi': np.False_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:44:10,954 - INFO - Saved state to trade_state.json
+2025-03-30 07:44:10,956 - INFO - Sell conditions not met: {'rsi': np.True_, 'stoch_rsi': np.True_, 'macd': np.True_, 'trend': np.False_}
+2025-03-30 07:44:10,959 - INFO - Saved state to trade_state.json
