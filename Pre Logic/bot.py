@@ -8,12 +8,7 @@ import os
 from datetime import datetime
 import sys
 import io
-import csv
 from dotenv import load_dotenv
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.metrics import accuracy_score
-import joblib
 
 load_dotenv()
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -33,10 +28,12 @@ with open("config.json", "r") as f:
     config = json.load(f)
 
 # Initialize exchange (Binance Futures Testnet)
+# Retrieve API key, secret, and testnet URL from environment variables
 api_key = os.getenv("API_KEY")
 api_secret = os.getenv("API_SECRET")
 testnet_url = os.getenv("TESTNET_URL")
 
+# Validate environment variables
 if not api_key or not api_secret:
     logging.error("API_KEY or API_SECRET not found in .env file. Please set them and try again.")
     sys.exit(1)
@@ -45,6 +42,7 @@ if not testnet_url:
     logging.warning("TESTNET_URL not found in .env file. Using default Binance Futures Testnet URL.")
     testnet_url = "https://testnet.binancefuture.com"
 
+# Initialize exchange (Binance Futures Testnet)
 exchange = ccxt.binance({
     'apiKey': api_key,
     'secret': api_secret,
@@ -65,18 +63,18 @@ def get_server_time():
 
 # Safe API call with retry mechanism
 def safe_api_call(api_call, *args, **kwargs):
-    for attempt in range(3):
+    for attempt in range(3):  # Retry up to 3 times
         try:
             return api_call(*args, **kwargs)
         except ccxt.NetworkError as e:
             logging.error(f"Network error: {e}. Retrying...")
-            time.sleep(1)
+            time.sleep(1)  # Wait before retrying
         except ccxt.ExchangeError as e:
-            if e.args[0]['code'] == -1021:
+            if e.args[0]['code'] == -1021:  # Timestamp error
                 logging.error("Timestamp error. Adjusting time...")
-                time.sleep(1)
+                time.sleep(1)  # Wait before retrying
             else:
-                raise
+                raise  # Re-raise if it's not a timestamp error
     raise Exception("API call failed after retries.")
 
 # Load state from trade_state.json
@@ -129,9 +127,8 @@ def get_default_state():
         "dynamic_rsi_sell": config["rsi_sell"],
         "dynamic_stoch_rsi_buy": config["stoch_rsi_buy"],
         "dynamic_stoch_rsi_sell": config["stoch_rsi_sell"],
-        "trade_cooldown": 0,
-        "last_trade_time": 0,
-        "trade_skipped": False
+        "trade_cooldown": 0,  # New: Cooldown timer
+        "last_trade_time": 0   # New: Last trade timestamp
     }
 
 # Save state to trade_state.json
@@ -201,12 +198,6 @@ def calculate_indicators(df):
     except Exception as e:
         logging.error(f"calculate_indicators error: {e}")
         return None
-
-# Check if volume is rising
-def is_volume_rising(df):
-    if len(df) < 2:
-        return False
-    return df["volume"].iloc[-1] > df["volume"].iloc[-2]
 
 # Fetch current ticker price with fallback
 def fetch_ticker_with_fallback(state):
@@ -317,10 +308,13 @@ def calculate_volatility(df):
 
 # Adjust volume threshold dynamically
 def adjust_volume_threshold(state, df):
+    volatility = calculate_volatility(df)
     base_volume_ratio = config["min_volume_ratio"]
-    dynamic_volume_ratio = df["volume"].rolling(window=20).mean().iloc[-1] * 1.2  # Example adjustment
-    state["dynamic_volume_ratio"] = dynamic_volume_ratio
-    logging.info(f"Adjusted volume ratio to {state['dynamic_volume_ratio']} based on recent activity")
+    if volatility > config["volatility_threshold"]:
+        state["dynamic_volume_ratio"] = min(base_volume_ratio * 1.5, 0.5)
+    else:
+        state["dynamic_volume_ratio"] = base_volume_ratio
+    logging.info(f"Adjusted volume ratio to {state['dynamic_volume_ratio']} based on volatility {volatility:.4f}")
     return state
 
 # Adjust RSI/Stoch RSI thresholds based on volatility
@@ -349,7 +343,7 @@ def monitor_skipped_trades(state, current_price, df):
     if len(state["last_price_history"]) > window:
         state["last_price_history"].pop(0)
     
-    if state["trade_skipped"]:
+    if "trade_skipped" in state and state["trade_skipped"]:
         state["skipped_trades"] += 1
     else:
         state["skipped_trades"] = 0
@@ -365,61 +359,6 @@ def monitor_skipped_trades(state, current_price, df):
             logging.info(f"Loosened conditions due to {state['skipped_trades']} skipped trades and {price_change:.2%} price move")
     
     return state
-
-# Log skipped trades in CSV format
-def log_skipped_trade(reason, current_price, df):
-    log_entry = {
-        "timestamp": datetime.now().isoformat(),
-        "reason": reason,
-        "current_price": current_price,
-        "volume": df["volume"].iloc[-1],
-        "rsi": df["rsi"].iloc[-1],
-        "stoch_rsi": df["stoch_rsi"].iloc[-1]
-    }
-    
-    # Append to CSV file
-    file_exists = os.path.isfile("skipped_trades_log.csv")
-    with open("skipped_trades_log.csv", mode='a', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=log_entry.keys())
-        if not file_exists:
-            writer.writeheader()  # Write header only if file does not exist
-        writer.writerow(log_entry)
-
-# Analyze skipped trades with machine learning
-def analyze_skipped_trades():
-    try:
-        # Load skipped trades data
-        skipped_trades_data = pd.read_json("skipped_trades_log.json", lines=True)
-        
-        # Feature engineering
-        skipped_trades_data['price_change'] = skipped_trades_data['current_price'].diff().shift(-1)  # Price change after the trade was skipped
-        features = skipped_trades_data[['volume', 'rsi', 'stoch_rsi', 'price_change']]
-        labels = skipped_trades_data['reason'].apply(lambda x: 1 if x == "Expected profit below threshold" else 0)  # Example label
-
-        # Split the data
-        X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
-
-        # Hyperparameter tuning with Grid Search
-        param_grid = {
-            'n_estimators': [50, 100],
-            'max_depth': [None, 10, 20],
-            'min_samples_split': [2, 5],
-        }
-        model = RandomForestClassifier()
-        grid_search = GridSearchCV(model, param_grid, cv=5)
-        grid_search.fit(X_train, y_train)
-
-        # Evaluate the model
-        predictions = grid_search.predict(X_test)
-        accuracy = accuracy_score(y_test, predictions)
-        logging.info(f"Model accuracy: {accuracy:.2f}")
-
-        # Save the model
-        joblib.dump(grid_search.best_estimator_, "skipped_trades_model.pkl")
-        logging.info("Saved machine learning model for skipped trades analysis.")
-
-    except Exception as e:
-        logging.error(f"Error analyzing skipped trades: {e}")
 
 # Dynamic risk adjustment based on market conditions
 def adjust_risk(state, df, balance):
@@ -492,8 +431,6 @@ def run_bot(dry_run=False):
     side = state["side"]
     cumulative_fees = state["cumulative_fees"]
     current_leverage = state["current_leverage"]
-    last_review_time = time.time()
-    review_interval = 3600  # Review every hour
 
     while True:
         try:
@@ -656,14 +593,12 @@ def run_bot(dry_run=False):
                 if expected_profit / (quantity * current_price / current_leverage) < config["min_profit_ratio"]:
                     logging.info(f"Trade skipped: Expected profit ({expected_profit}) below threshold")
                     state["trade_skipped"] = True
-                    log_skipped_trade("Expected profit below threshold", current_price, df)
                     save_state(state)
                     time.sleep(60)
                     continue
-                if latest["volume"] < avg_volume * state["dynamic_volume_ratio"] and not is_volume_rising(df):
-                    logging.info(f"Trade skipped: Volume ({latest['volume']}) below threshold ({avg_volume * state['dynamic_volume_ratio']}) and not rising")
+                if latest["volume"] < avg_volume * state["dynamic_volume_ratio"]:
+                    logging.info(f"Trade skipped: Volume ({latest['volume']}) below threshold ({avg_volume * state['dynamic_volume_ratio']})")
                     state["trade_skipped"] = True
-                    log_skipped_trade("Volume below threshold and not rising", current_price, df)
                     save_state(state)
                     time.sleep(60)
                     continue
@@ -674,7 +609,7 @@ def run_bot(dry_run=False):
                     "rsi": latest["rsi"] < state["dynamic_rsi_buy"] if pd.notna(latest["rsi"]) else False,
                     "stoch_rsi": latest["stoch_rsi"] < state["dynamic_stoch_rsi_buy"] if pd.notna(latest["stoch_rsi"]) else False,
                     "macd": latest["macd"] > -10 if pd.notna(latest["macd"]) else False,
-                    "trend": (latest_trend["close"] > latest_trend["bb_upper"]) * config["trend_confirmation_weight"]  # Adjusted weight
+                    "trend": latest_trend["close"] > latest_trend["bb_upper"]  # Trend confirmation
                 }
                 if all(buy_conditions.values()):
                     order, sl_order, tp_order = place_order("buy", quantity, dry_run=dry_run)
@@ -706,15 +641,14 @@ def run_bot(dry_run=False):
                             "side": side,
                             "cumulative_fees": cumulative_fees,
                             "current_leverage": current_leverage,
-                            "last_trade_time": time.time(),
-                            "trade_cooldown": config.get("trade_cooldown", 0)
+                            "last_trade_time": time.time(),  # Update last trade time
+                            "trade_cooldown": config.get("trade_cooldown", 0)  # Set cooldown
                         })
                         save_state(state)
                         update_trade_stats(state)
                 else:
                     logging.info(f"Buy conditions not met: {buy_conditions}")
                     state["trade_skipped"] = True
-                    log_skipped_trade("Buy conditions not met", current_price, df)
                     save_state(state)
 
                 # Sell signal (shorting)
@@ -722,7 +656,7 @@ def run_bot(dry_run=False):
                     "rsi": latest["rsi"] > state["dynamic_rsi_sell"] if pd.notna(latest["rsi"]) else False,
                     "stoch_rsi": latest["stoch_rsi"] > state["dynamic_stoch_rsi_sell"] if pd.notna(latest["stoch_rsi"]) else False,
                     "macd": latest["macd"] < 10 if pd.notna(latest["macd"]) else False,
-                    "trend": (latest_trend["close"] < latest_trend["bb_lower"]) * config["trend_confirmation_weight"]  # Adjusted weight
+                    "trend": latest_trend["close"] < latest_trend["bb_lower"]  # Trend confirmation
                 }
                 if all(sell_conditions.values()):
                     order, sl_order, tp_order = place_order("sell", quantity, dry_run=dry_run)
@@ -754,15 +688,14 @@ def run_bot(dry_run=False):
                             "side": side,
                             "cumulative_fees": cumulative_fees,
                             "current_leverage": current_leverage,
-                            "last_trade_time": time.time(),
-                            "trade_cooldown": config.get("trade_cooldown", 0)
+                            "last_trade_time": time.time(),  # Update last trade time
+                            "trade_cooldown": config.get("trade_cooldown", 0)  # Set cooldown
                         })
                         save_state(state)
                         update_trade_stats(state)
                 else:
                     logging.info(f"Sell conditions not met: {sell_conditions}")
                     state["trade_skipped"] = True
-                    log_skipped_trade("Sell conditions not met", current_price, df)
                     save_state(state)
 
             elif in_position:
@@ -866,11 +799,6 @@ def run_bot(dry_run=False):
                     })
                     save_state(state)
                     update_trade_stats(state)
-
-            # Analyze skipped trades periodically
-            if time.time() - last_review_time > review_interval:
-                analyze_skipped_trades()
-                last_review_time = time.time()
 
             time.sleep(60)
         except ccxt.RateLimitExceeded as e:

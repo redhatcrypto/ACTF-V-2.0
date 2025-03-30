@@ -21,7 +21,6 @@
     "min_profit_ratio": 0.005,
     "max_cumulative_fees": 1.0,
     "min_volume_ratio": 0.2,
-    "dynamic_volume_ratio": 0.2,
     "atr_period": 14,
     "atr_multiplier": 2.0,
     "starting_balance": 20,
@@ -32,12 +31,8 @@
     "max_skipped_trades": 3,
     "price_move_threshold": 0.01,
     "risk_adjustment_factor": 0.5,
-    "trade_cooldown": 5,
-    "scalping_mode": false,
-    "scalping_take_profit": 0.005,
-    "scalping_stop_loss": 0.002,
-    "trend_confirmation_weight": 0.5,
-    "max_depth": null,
-    "n_estimators": 100,
-    "min_samples_split": 2
+    "trade_cooldown": 5,  
+    "scalping_mode": false, 
+    "scalping_take_profit": 0.005, 
+    "scalping_stop_loss": 0.002 
 }

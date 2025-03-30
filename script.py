@@ -11,9 +11,9 @@ import io
 import csv
 from dotenv import load_dotenv
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-import joblib
+import joblib  # For saving and loading the model
 
 load_dotenv()
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -131,7 +131,7 @@ def get_default_state():
         "dynamic_stoch_rsi_sell": config["stoch_rsi_sell"],
         "trade_cooldown": 0,
         "last_trade_time": 0,
-        "trade_skipped": False
+        "trade_skipped": False  # New: Track if a trade was skipped
     }
 
 # Save state to trade_state.json
@@ -366,6 +366,9 @@ def monitor_skipped_trades(state, current_price, df):
     
     return state
 
+# Log skipped trades
+import csv  # Ensure to import the csv module at the top of your file
+
 # Log skipped trades in CSV format
 def log_skipped_trade(reason, current_price, df):
     log_entry = {
@@ -399,23 +402,17 @@ def analyze_skipped_trades():
         # Split the data
         X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
 
-        # Hyperparameter tuning with Grid Search
-        param_grid = {
-            'n_estimators': [50, 100],
-            'max_depth': [None, 10, 20],
-            'min_samples_split': [2, 5],
-        }
+        # Train a Random Forest Classifier
         model = RandomForestClassifier()
-        grid_search = GridSearchCV(model, param_grid, cv=5)
-        grid_search.fit(X_train, y_train)
+        model.fit(X_train, y_train)
 
         # Evaluate the model
-        predictions = grid_search.predict(X_test)
+        predictions = model.predict(X_test)
         accuracy = accuracy_score(y_test, predictions)
         logging.info(f"Model accuracy: {accuracy:.2f}")
 
         # Save the model
-        joblib.dump(grid_search.best_estimator_, "skipped_trades_model.pkl")
+        joblib.dump(model, "skipped_trades_model.pkl")
         logging.info("Saved machine learning model for skipped trades analysis.")
 
     except Exception as e:
